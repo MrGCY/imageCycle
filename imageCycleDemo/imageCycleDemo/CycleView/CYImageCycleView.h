@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@protocol customImageCycleIndictorPattern;
+@protocol CustomImageCycleIndictorPatternDelegate;
 @class CYImageCycleView;
 @protocol CYImageCycleViewDelegate <NSObject>
 /**
@@ -51,7 +51,7 @@
  */
 @property (strong, nonatomic, readonly) NSArray *images;
 //自定义指示器代理
-@property(weak,nonatomic) id<customImageCycleIndictorPattern> indicatorPatternDelegate;
+@property(weak,nonatomic) id<CustomImageCycleIndictorPatternDelegate> indicatorPatternDelegate;
 @property(weak,nonatomic) id<CYImageCycleViewDelegate> delegate;
 #pragma mark- function
 //加载本地图片
@@ -80,7 +80,7 @@
 /**
  *  指示器样式
  */
-@protocol customImageCycleIndictorPattern <NSObject, UITableViewDelegate>
+@protocol CustomImageCycleIndictorPatternDelegate <NSObject, UITableViewDelegate>
 
 @required
 /**

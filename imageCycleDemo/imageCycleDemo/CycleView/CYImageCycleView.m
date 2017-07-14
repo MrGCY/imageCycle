@@ -50,7 +50,7 @@
     self.indicatorView.currentPageIndicatorTintColor = currentPageIndicatorTintColor;
 }
 //设置自定义视图代理
--(void)setIndicatorPatternDelegate:(id<customImageCycleIndictorPattern>)indicatorPatternDelegate{
+-(void)setIndicatorPatternDelegate:(id<CustomImageCycleIndictorPatternDelegate>)indicatorPatternDelegate{
     _indicatorPatternDelegate = indicatorPatternDelegate;
     if (indicatorPatternDelegate) {
         [self.indicatorView removeFromSuperview];
